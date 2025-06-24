@@ -4,27 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materias 2025</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="nav-container">
+          <a href="index.html" class="logo">Mi Cursada</a>
+          <button class="hamburger" id="hamburgerBtn">☰</button>
+          <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="avisos.html">Avisos</a></li>
             <li><a href="sobremi.html">Sobre mi</a></li>
             <li><a href="materias2025.html">Materias 2025</a></li>
             <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+            <li><a href="proyectogroup.html">Proyecto Grupal</a></li>
+            <li class="theme-toggle-btns">
+                <button id="btnDarkMode">🌙</button>
+                <button id="btnLightMode">☀️</button>
+              </li>
+          </ul>
+        </div>
+    </nav>       
 
-    <h1>Materias del 1er Cuatrimestre 2025</h1>
+      <main class="container">
+        <h1>Materias del 1er Cuatrimestre 2025</h1>
+        <div class="materias-grid">
+          <div class="card-materia">
+            <h3>Testing de Aplicaciones</h3>
+          </div>
+          <div class="card-materia">
+            <h3><a href="https://virtualbsp.uade.edu.ar/d2l/home/43347" target="_blank">Diseño y Desarrollo Web</a></h3>
+          </div>
+          <div class="card-materia">
+            <h3>Marketing</h3>
+          </div>
+          <div class="card-materia">
+            <h3>Sistemas de Información II</h3>
+          </div>
+          <div class="card-materia">
+            <h3>Programación I</h3>
+          </div>
+        </div>
+    
+        <h2 style="margin-top: 3rem;">Materias del 2do Cuatrimestre 2025</h2>
+        <div class="materias-grid">
+          <div class="card-materia">
+            <h3>Liderazgo y Negociación</h3>
+          </div>
+          <div class="card-materia">
+            <h3>Arquitectura de Computadores</h3>
+          </div>
+          <div class="card-materia">
+            <h3>Paradigma Orientado a Objetos</h3>
+          </div>
+          <div class="card-materia">
+            <h3>Matemática Discreta</h3>
+          </div>
+        </div>
+      </main>
 
-    <ul>
-        <li>Testing de Aplicaciones</li>
-        <li><a href="https://virtualbsp.uade.edu.ar/d2l/home/43347">Diseño y Desarrollo Web</a></li>
-        <li>Marketing</li>
-        <li>Sistemas de Información II</li>
-        <li>Programación I</li>
-    </ul>
+    <footer>Thomas Delli Antoni - 1122801 - 27/03/2025</footer>
 
+    <script src="main.js"></script>
 </body>
-</html>
+</html> 

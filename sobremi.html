@@ -4,25 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="nav-container">
+          <a href="index.html" class="logo">Mi Cursada</a>
+          <button class="hamburger" id="hamburgerBtn">☰</button>
+          <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="avisos.html">Avisos</a></li>
             <li><a href="sobremi.html">Sobre mi</a></li>
             <li><a href="materias2025.html">Materias 2025</a></li>
             <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+            <li><a href="proyectogroup.html">Proyecto Grupal</a></li>
+            <li class="theme-toggle-btns">
+                <button id="btnDarkMode">🌙</button>
+                <button id="btnLightMode">☀️</button>
+              </li>
+          </ul>
+        </div>
+    </nav>        
 
-    <h1>Sobre Mi</h1>
+    <main class="container sobre-mi">
+        <div class="sobre-mi-content">
+          <div class="sobre-mi-img">
+            <img src="img/photo_thomas.jpg" alt="Mi foto de perfil">
+          </div>
+          <div class="sobre-mi-texto">
+            <h1>Sobre mí</h1>
+            <p><strong>Nombre:</strong> Thomas Delli Antoni</p>
+            <p><strong>Carrera:</strong> Lic. en Gestión de la Tecnología de Información</p>
+            <p><strong>Residencia:</strong> Copenhagen, Dinamarca</p>
+            <p><strong>Edad:</strong> 25 años</p>
+          </div>
+        </div>
+    </main>
 
-    <img src="img/photo_thomas.jpg" alt="Mi foto de perfil">
-    <p>Nombre Completo: Thomas Delli Antoni</p>
-    <p>Carrera: Licenciatura en Gestión de la Tecnología de Información</p>
-    <p>Residencia: Copenhagen, Dinamarca</p>
-    <p>Edad: 25 años</p>
+    <footer>Thomas Delli Antoni - 1122801 - 27/03/2025</footer>
 
+    <script src="main.js"></script>
 </body>
-</html>
+</html> 

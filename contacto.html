@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="nav-container">
+          <a href="index.html" class="logo">Mi Cursada</a>
+          <button class="hamburger" id="hamburgerBtn">☰</button>
+          <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
             <li><a href="avisos.html">Avisos</a></li>
             <li><a href="sobremi.html">Sobre mi</a></li>
             <li><a href="materias2025.html">Materias 2025</a></li>
             <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+            <li><a href="proyectogroup.html">Proyecto Grupal</a></li>
+            <li class="theme-toggle-btns">
+                <button id="btnDarkMode">🌙</button>
+                <button id="btnLightMode">☀️</button>
+              </li>
+          </ul>
+        </div>
+    </nav>    
 
+    <main class="container">
         <h1>Contacto</h1>
 
         <form action="submit_form.php" method="post">
@@ -30,4 +42,10 @@
 
             <button type="submit">Enviar</button>
         </form>
-    </nav>
+    </main>
+
+    <footer>Thomas Delli Antoni - 1122801 - 27/03/2025</footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 
