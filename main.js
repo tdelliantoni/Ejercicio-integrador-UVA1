@@ -60,25 +60,44 @@ function setMode(mode) {
       btnContainer.appendChild(btnDark);
     }
   
-    // Validación de formularios
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      form.addEventListener('submit', function (e) {
-        let valid = true;
-        form.querySelectorAll('input[required], textarea[required], select[required]').forEach(input => {
-          if (!input.value.trim()) {
-            valid = false;
-            input.style.border = '2px solid #e74c3c';
-          } else {
-            input.style.border = '';
-          }
-        });
-        if (!valid) {
-          e.preventDefault();
-          alert('Por favor, completa todos los campos obligatorios.');
-        }
-      });
+// Validación de formularios con mensaje de éxito
+const forms = document.querySelectorAll('form');
+forms.forEach(form => {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // evitar que recargue la página
+
+    let valid = true;
+    let nombre = form.querySelector('input[name="nombre"]');
+    let mensaje = form.querySelector('textarea[name="mensaje"]');
+
+    form.querySelectorAll('input[required], textarea[required], select[required]').forEach(input => {
+      if (!input.value.trim()) {
+        valid = false;
+        input.style.border = '2px solid #e74c3c';
+      } else {
+        input.style.border = '';
+      }
     });
+
+    if (!valid) {
+      alert('Por favor, completa todos los campos obligatorios.');
+      return;
+    }
+
+    // Mostrar mensaje de éxito
+    const mensajeFinal = document.createElement('div');
+    mensajeFinal.style.padding = '1.5rem';
+    mensajeFinal.style.marginTop = '1rem';
+    mensajeFinal.style.background = '#dff0d8';
+    mensajeFinal.style.color = '#3c763d';
+    mensajeFinal.style.borderRadius = '8px';
+    mensajeFinal.style.textAlign = 'center';
+    mensajeFinal.textContent = `Gracias por su contacto, ${nombre.value}. En breve le estaré respondiendo.`;
+
+    form.replaceWith(mensajeFinal);
+  });
+});
+
   
     // Aplicar el modo guardado
     const saved = localStorage.getItem('theme');
